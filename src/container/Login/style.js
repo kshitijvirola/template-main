@@ -31,20 +31,23 @@ const LoginStyle = styled.div`
       max-height: 95px;
       margin-bottom: 11px;
     }
-  }
-  .head {
-    font-weight: bold;
-    font-size: 30px;
-  }
-  .remember {
-    color: #616161;
-  }
-  .check {
-    padding: 1px;
-  }
-  .forgot {
-    text-align: end;
-    font-size: 12px;
+    .head {
+      font-weight: bold;
+      font-size: 30px;
+    }
+    .remember {
+      color: #616161;
+    }
+    .check {
+      padding: 1px;
+    }
+    .forgot {
+      text-align: end;
+      font-size: 12px;
+    }
+    .btnDiv{
+      margin-top: 1rem
+    }
   }
 `;
 export { LoginStyle };
