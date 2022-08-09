@@ -71,7 +71,7 @@ const FormWrapper = styled.div`
     }
   }
   .empty {
-    border: 1px solid #e81c1c;
+    border: 2px solid #e81c1c;
   }
   input::-webkit-outer-spin-button,
   input::-webkit-inner-spin-button {

@@ -5,6 +5,7 @@ import Login from "container/Login";
 import DashBoard from "container/Dashboard";
 import PageLoader from "components/PageLoader";
 import { getAuthUserID } from "modules/helper";
+import LayOut from "./appLayOut";
 const routes = [
   {
     path: "/",
@@ -25,26 +26,25 @@ const routes = [
     component: DashBoard,
   },
 ];
-const PrivateRoute = ({ component: Component, ...rest }) => {debugger
+const PrivateRoute = ({ component: Component, ...rest }) => {
   if (getAuthUserID()) {
     return <Route {...rest} render={(props) => <Component {...props} />} />;
-  } else {
-    return <Redirect to="/login" />;
-  }
+  } else return <Redirect to="/login" />;
 };
 const RestrictedRoute = ({ component: Component, publicAccess, ...rest }) => {
   if (getAuthUserID()) {
     return (
-      <Route
-        {...rest}
-        render={(props) =>
-          publicAccess ? <Component {...props} /> : <Redirect to="/" />
-        }
-      />
+      <LayOut>
+        <Route
+          {...rest}
+          render={(props) =>
+            publicAccess ? <Component {...props} /> : <Redirect to="/" />
+          }
+        />
+      </LayOut>
     );
-  } else {
+  } else
     return <Route {...rest} render={(props) => <Component {...props} />} />;
-  }
 };
 class Routes extends Component {
   render() {
