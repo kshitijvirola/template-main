@@ -10,12 +10,8 @@ const FormWrapper = styled.div`
   flex-wrap: wrap;
   align-items: stretch;
   width: 100%;
-					 
-
   .ant-input-affix-wrapper {
-			  
     padding: 0;
-												
     box-shadow: none;
     border-radius: 5px;
     border: 1px solid #e4e4e4;
@@ -30,28 +26,28 @@ const FormWrapper = styled.div`
   }
   input,
   textarea {
-    background: #F2F2F2;
+    background: #f2f2f2;
     display: block;
     width: 100%;
     line-height: 1.5;
     margin: 0;
-    -webkit-appearance: none;    
-    height: 2.2rem;				 
-    font-size: 15px;
-    font-weight: 300;
+    height: 2.2rem;
+    font-size: 18px;
+    font-weight: 400;
     padding: 2px 20px;
     color: #505050;
     font-family: "Rubik", sans-serif;
     border: 1px solid #e4e4e4;
     border-radius: 5px;
+    -webkit-appearance: none;
     ::placeholder {
-      color: #c5c5c5;
+      color: gray;
     }
     :-ms-input-placeholder {
-      color: #c5c5c5;
+      color: gray;
     }
     ::-ms-input-placeholder {
-      color: #c5c5c5;
+      color: gray;
     }
     :hover,
     :focus {
@@ -65,14 +61,13 @@ const FormWrapper = styled.div`
       font-size: 14px;
     }
   }
-  // textarea {height: 40px;}
   .ant-input-suffix {
     border-radius: 0 5px 5px 0;
-    background: #F2F2F2;
+    background: #f2f2f2;
     margin-left: 0px;
     padding-right: 5px;
     .anticon {
-      color: ${Theme.mainColor};
+      color: #000;
     }
   }
   .empty {

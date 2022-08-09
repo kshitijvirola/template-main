@@ -47,7 +47,7 @@ class Login extends Component {
         <Image src={coffee} alt="coffee" preview={false} className="coffee" />
         <div className="box">
           <Image src={logo} alt="logo" preview={false} />
-          <h1 className="head">Login</h1>
+          <h1 className="head">{LoginConst.login}</h1>
           <Formik
             initialValues={init}
             validationSchema={loginValidationSchema}
@@ -77,6 +77,7 @@ class Login extends Component {
                         value={values.user}
                         handleChange={handleChange}
                         max={255}
+                        placeholder={LoginConst.eyei}
                         tabIndex="1"
                       />
                     </FormGroup>
@@ -108,12 +109,13 @@ class Login extends Component {
                     </FormGroup>
                     {errors.password && touched.password ? (
                       <div className="form-error">{errors.password}</div>
-                      ) : null}
-                      <div className="forgot">{LoginConst.fp}</div>
+                    ) : null}
+                    <div className="forgot">
+                      <NavLink to="/forget-pasword" className="pointer">
+                        {LoginConst.fp}
+                      </NavLink>
+                    </div>
                   </div>
-                  <NavLink to="/forget-pasword" className="forgetlbl">
-                    {LoginConst.forgerPwd}
-                  </NavLink>
                   <div className="rememberDiv">
                     <Checkbox
                       checked={checked}

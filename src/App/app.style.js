@@ -5,10 +5,16 @@ const AppContainer = styled.div`
   .form-error {
     color: red;
   }
+  .pointer{
+    cursor: pointer;
+  }
   .txtWrap {
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
+  }
+  a,a:hover {
+    color: #000;
   }
 `;
 
